@@ -25,7 +25,13 @@ angular.module('myApp.services', [])
 		deletePage: function(id){
 			return $http.get('/api/pages/delete' + id);
 		},
-		getAdminPageContent: function
-	}
-}])
+		getAdminPageContent: function(id){
+			return $http.get('/api/pages/admin-details/' + id);
+		},
+		getPageContent: function(url){
+			return $http.get('/api/pages/delete' + url);
+		}
+	};
+
+}]);
   value('version', '0.1');
